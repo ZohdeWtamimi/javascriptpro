@@ -56,7 +56,12 @@ body {
 
 
 
-
+.txt{
+    width: 80% !important;
+}
+.txt:focus{
+    outline: none;
+}
 #sub {
     margin-top:30px;
     padding: 10px 40px;
