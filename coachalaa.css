@@ -1,0 +1,309 @@
+:root{
+ --beige:#FFD8A9;
+ --primaryColor: #ffffff;
+ --secondaryColor:#5c1444;
+ --bgcolor-1:rgb(255, 255, 255);
+ --brcolor-2:black;
+}
+
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   body {
+    font-family: cursive;
+    background-color: var(--primaryColor);
+   }
+   a {
+    text-decoration: none;
+   }
+   li {
+    list-style: none;
+   }
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--secondaryColor);
+    color: var(--bgcolor-1)
+   }
+   .nav-links a {
+    color: var(--bgcolor-1);
+   }
+   /* LOGO */
+   .logo {
+    font-size: 32px;
+   }
+   /* NAVBAR MENU */
+   .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+   }
+   .menu li:hover {
+    background-color:var(--brcolor-2);
+    border-radius: 5px;
+    transition: 0.3s ease;
+   }
+   .menu li {
+    padding: 5px 14px;
+   }
+   /* DROPDOWN MENU */
+   .trainers {
+    position: relative; 
+   }
+   .dropdown {
+    background-color: var(--brcolor-2);
+    padding: 1em 0;
+    position: absolute; 
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+   }
+   .dropdown li + li {
+    margin-top: 10px;
+   }
+   .dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+   }
+   .dropdown li:hover {
+    background-color: var(--secondaryColor);
+   }
+   .trainers:hover .dropdown {
+    display: block;
+   }
+
+/*RESPONSIVE NAVBAR MENU */
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+   } 
+   /*HAMBURGER MENU*/
+   .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+   }
+   /* APPLYING MEDIA QUERIES */
+   @media (max-width: 768px) {
+   .menu { 
+    display:none;
+    position: absolute;
+    background-color:var(--secondaryColor);
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+   }
+   .menu li:hover {
+    display: inline-block;
+    background-color:var(--secondaryColor);
+    transition: 0.3s ease;
+   }
+   .menu li + li {
+    margin-top: 12px;
+   }
+   input[type=checkbox]:checked ~ .menu{
+    display: block;
+   }
+   .hamburger {
+    display: block;
+   }
+   .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+   }
+   .dropdown li:hover {
+    background-color: var(--secondaryColor);
+   }
+   }
+
+
+
+
+
+
+ /* coach informations */
+
+ #form{
+    display: none;
+ }
+
+.coachpage{
+    background-color:var(--primaryColor);
+    display: flex;
+    margin-top: 3%;
+}
+
+.coach{
+    flex-basis: 60%;
+    padding: 40px 40px;
+}
+
+.info{
+flex-basis: 40%;
+padding: 10px;
+text-align: left;
+} 
+
+.info h2 h3{
+    color: var(--bgcolor-1);
+}
+
+#alaa{
+    width: 80%;
+    border-radius: 40px;
+}
+
+
+
+  .fa-linkedin{
+    color: var(--brcolor-2);
+    font-size: 40px;
+  }
+
+
+  /*/////////////////////////////////////////*/
+.containerr{
+    width: 100%;
+    height:10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    padding: 10px 30px;
+    background-color: var(--secondaryColor);
+    color: var(--bgcolor-1);
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+}
+
+.popup{
+    width: 400px;
+    background: var(--secondaryColor);
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: var(--bgcolor-1);
+    font-size: 20px;
+    visibility: hidden;
+    transition: transform 0.4s,top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgb(0, 0, 0.2);
+}
+
+.popup h2{
+    font-size: 35px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+    color: var(--bgcolor-1);
+}
+
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background-color: var(--primaryColor);
+    color: var(--brcolor-2);
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgb(0, 0, 0.2);
+}
+
+
+/*/////////////footer//////////////*/
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: -15%;
+    width: 100%;
+    height: 19%;
+    background-color: var(--secondaryColor);
+    color: var(--bgcolor-1);
+    text-align: center;
+}
+
+
+.fa-phone{color: var(--bgcolor-1);
+    font-size:150%;}
+.fa-linkedin{color: var(--bgcolor-1);
+    font-size:150%;}
+.fa-twitter{color: var(--bgcolor-1);
+    font-size:150%;}
+.fa-github{color: var(--bgcolor-1);
+    font-size:150%;}
+
+
+    /*//////////////form///////////////*/
+#form{
+    border: 4px solid var(--secondaryColor);
+    border-radius: 10%;
+    background-color: var(--bgcolor-1);
+    width: 40%;
+    height: 80%;
+    padding: 2%;
+}
+
+input{
+    width: 80%;
+    height: 15%;
+    padding: 8%;
+    border-radius: 10%;
+}
+
+#update{
+    padding: 10px 30px;
+    background-color: var(--secondaryColor);
+    color: var(--bgcolor-1);
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+}
+
+#edit{
+    padding: 10px 30px;
+    background-color: var(--secondaryColor);
+    color: var(--bgcolor-1);
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+}

@@ -1,0 +1,153 @@
+:root{
+    --bgcolor-3:rgb(237, 236, 236);
+    --primaryColor: #F1EFDC;
+    --secondaryColor:#42032C;
+    --bgcolor-1:#ffffff;
+    --brcolor-2:black;
+   }
+
+/* ===== Google Font Import - Poformsins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondaryColor);
+}
+
+.cont{
+    position: relative;
+    max-width: 460px;
+    width: 100%;
+    background: var(--bgcolor-1);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.cont.forms{
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+
+.cont .form{
+    width: 50%;
+    padding: 30px;
+    background-color: var(--bgcolor-1);
+    transition: margin-left 0.18s ease;
+}
+
+.cont.active .forms{
+    height: 600px;
+}
+.cont .form .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.form .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: var(--secondaryColor);
+    border-radius: 25px;
+}
+
+.form .input-field{
+    position: relative;
+    height: 50px;
+    width: 230%;
+    margin-top: 20px;
+}
+
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid){
+    border-bottom-color: var(--secondaryColor);
+}
+
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondaryColor);
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+    color: var(--secondaryColor);
+}
+
+.input-field i.icon{
+    left: 0;
+}
+.input-field i.showHidePw{
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form a.text{
+    color: var(--secondaryColor);
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .button{
+    margin-top: 35px;
+}
+
+.form button {
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: var(--secondaryColor);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 270px;
+    height:50px ; 
+}
+
+.button input:hover{
+    background-color: var(--secondaryColor);
+}
+
+ .login-signup{
+    margin-top: 30px;
+    text-align: center;
+    width: 180px;
+}

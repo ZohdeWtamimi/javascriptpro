@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attendance</title>
+    <link rel="stylesheet" href="./attendance.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+    </style>
+    
+</head>
+<body>
+
+    <!------------------------------------navbar------------------------------------------>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo"><img src="../img/logo2.png" style="width:10% ;"></div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+          <!-- USING CHECKBOX HACK -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <!-- NAVIGATION MENUS -->
+          <div class="menu">
+            <li><a href="../main/mainhome.html">Home</a></li>
+            <li><a href="#">attendance</a></li>
+            <li class="trainers">
+              <a href="#">trainers</a>
+              <!-- DROPDOWN MENU -->
+              <!-- <ul class="dropdown">
+                <li><a href="./index2.html">coach Mona Al-obisat</a></li>
+                <li><a href="./index.html">Coach Ala'a Amayreh</a></li>
+              </ul> -->
+            </li>
+            <li><a href="#">support</a></li>
+          </div>
+        </ul>
+      </nav>
+  
+
+
+
+
+
+
+
+
+    <div class="containerZohde">
+        <div class="addUser">
+            <h2>Add Student</h2>
+            <p><button class="addUser"><i class="fa-solid fa-square-plus"></i></button></p>
+        </div>
+        <form class="addUserform" id="form">
+            <input placeholder="firstname" type="text" id="first" />
+            <input placeholder="lastname" type="text" id="last" />
+            <button type="submit" id="sub">submit</button>
+        </form>
+    
+        <div class="display"></div>
+        <div id="parent">
+            
+        </div>
+        <div id="box">
+            <div class="containerBox">
+                <div class="arrowLeft"><i class="fa-solid fa-arrow-left"></i></div>
+                <div class="rowBox">
+                    
+                </div>
+                <div class="arrowRight"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+            <div class="btns">
+                <button id="abcanseBtn">Absance</button>
+               
+            </div>
+            <div class="divsionContent">
+                <div class="section1">
+                    <h3 class="month" style="color: black; font-size: larger;">absence in this month</h3>
+                    <div class="calender"></div>
+                </div>
+    
+                <!-- <div class="section2">
+                    <div class="addAssign">
+                        <h4>Assigment</h4>
+                        <form id="assignForm" action="">
+                            <input id="assign" type="text">
+                            <button type="submit">add</button>
+                        </form>
+                    </div>
+                    <div class="assignment">
+                        
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    
+        <div id="feedback">
+            <form id="feedbackFrom" action="">
+                <input id="feed" type="text" class="feedbackInput" placeholder="add Feedback">
+                <button type="submit" id="addbutton">Add</button>
+            </form>
+            <div id="dispalyFeedback"></div>
+        </div>
+        <div id="feedbackDisappear"></div>
+
+        <button class="summary">Summary</button>
+        <div id="fixed">
+                <!-- <h1>Absance Summary</h1>
+                <h4>date</h4>
+            <div class="fixedCon">
+                <p>number : <span>${}</span></p>
+                <h3>name : <span>${}</span></h3>
+                <h3>abcanse : <span>${}</span></h3>
+            </div> -->
+        </div>
+        <div id="disappear"></div>
+
+    </div>
+
+
+
+    <!-------------------footer------------------->
+    <div class="footer">
+        <h2>Attendance Tracker</h2><br>
+        <h4>ATgroup@gmail.com</h4>
+        <h6>Follow us</h6>
+        <a href="https://www.linkedin.com/company/orange/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://twitter.com/orangejo" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://github.com/Orange-OpenSource" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <script src="./attendance.js"></script>
+</body>
+</html>

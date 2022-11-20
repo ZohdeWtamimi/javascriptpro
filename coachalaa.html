@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ala'a Amayreh</title>
+    <link rel="stylesheet" href="./coachalaa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   <nav class="navbar">
+      <!-- LOGO -->
+      <div class="logo"><img src="./logo2.png" style="width:10% ;"></div>
+      <!-- NAVIGATION MENU -->
+      <ul class="nav-links">
+        <!-- USING CHECKBOX HACK -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+          <li><a href="./index3.html">Home</a></li>
+          <li><a href="#">attendance</a></li>
+          <li class="trainers">
+            <a href="#">trainers</a>
+            <!-- DROPDOWN MENU -->
+            <ul class="dropdown">
+              <li><a href="./index2.html">coach Mona Al-obisat</a></li>
+              <li><a href="./index.html">Coach Ala'a Amayreh</a></li>
+            </ul>
+          </li>
+          <li><a href="#">support</a></li>
+        </div>
+      </ul>
+    </nav>
+
+
+
+    <div class="coachpage">
+       <div class="coach">
+          <form id="form" action="">
+            <input type="text" id="coachname" placeholder="your Name....">
+            <input type="text" id="coachinfo" placeholder="about you....">
+            <input type="text" id="coachemail" placeholder="your Email....">
+            <input type="text" id="coachnum" placeholder="your Phone Number....">
+             <button type="submit" id="edit">Edit</button>
+          </form>
+          <button id="update">update</button>
+          <div id="inform">
+         <h1 id="h1">Ala’a Amayreh</h1>
+         <h2 id="p"><b>Full-stack Developer & trainer at Orange Coding Academy, bachelor of business information technolog from University of jordan</b></h2><br>
+         <h2 id="h3">Aladdin.amayreh95@gmail.com</h2><br>
+         <h2 id="hnum"> +962776807919</h2><br>
+         </div>
+          <a href="https://www.linkedin.com/in/ala%E2%80%99a-amayreh-8797a5176/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+       </div>
+       <div class="info">
+         <img src="./coach alaa.jpeg" alt="" id="alaa">
+       </div>
+    </div>
+
+    <div class="containerr">
+      <button type="submit" class="btn" onclick="openPopup()">Massages</button>
+      <div class="popup" id="popup">
+       <img src="./infoo.png">
+       <h2>from manager salamah </h2>
+       <p> zoom meeting on Monday 21 Nov 2022 at 3:00 PM</p>
+       <button type="button" onclick="closePopup()">OK</button>
+      </div>
+    </div>
+
+
+    <div class="footer">
+      <h2>Attendance Tracker</h2><br>
+      <h4>ATgroup@gmail.com</h4>
+      <h6>Follow us</h6>
+      <a href="https://www.linkedin.com/company/orange/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://twitter.com/orangejo" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://github.com/Orange-OpenSource" target="_blank"><i class="fa-brands fa-github"></i></a>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>     
