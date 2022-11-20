@@ -56,8 +56,9 @@ body {
 
 
 
-.txt{
-    width: 80% !important;
+.form-control{
+    width: 80% ;
+    margin: 0 auto;
 }
 .txt:focus{
     outline: none;
@@ -110,4 +111,11 @@ body {
 
 .icons a:hover {
     color:var(--Eggplant);
+}
+
+
+@media(max-width: 700px){
+    .cont{
+        left: 50%;
+    }
 }
