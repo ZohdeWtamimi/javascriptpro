@@ -12,7 +12,7 @@ logform.addEventListener('submit', (e)=>{
         console.log(e.email == emailValue, e.password == passValue)
         if(e.email == emailValue && e.password == passValue){
             console.log('welcome')
-            location.href = "http://127.0.0.1:5500/main/mainhome.html";
+            location.href = "https://zohdewtamimi.github.io/javascriptpro/main/mainhome.html";
         }else{
             console.log('check your password')
         }
