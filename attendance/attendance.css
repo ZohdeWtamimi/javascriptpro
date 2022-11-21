@@ -68,7 +68,8 @@
     position: absolute; 
     display: none;
     border-radius: 8px;
-    top: 35px;
+    top: 39px;
+    right: 0px;
    }
    .dropdown li + li {
     margin-top: 10px;
@@ -568,7 +569,17 @@ input[type=checkbox]{
         background-color: var(--primaryColor);
         color: var(--brcolor-2);
     }
-    
+    .feedBtn{
+        background-color: #5c1444;
+        border: none;
+        color: #fff;
+        height: 100%;
+        width: 100%;
+    }
+    .feedBtn:hover{
+        background-color: #ccc;
+        color: #000;
+    }
 
 
 @media(max-width: 600px){

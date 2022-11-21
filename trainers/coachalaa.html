@@ -11,25 +11,31 @@
 <body>
    <nav class="navbar">
       <!-- LOGO -->
-      <div class="logo"><img src="./logo2.png" style="width:10% ;"></div>
+      <div class="logo"><img src="../img/logo2.png" style="width:10%;"></div>
       <!-- NAVIGATION MENU -->
       <ul class="nav-links">
         <!-- USING CHECKBOX HACK -->
         <input type="checkbox" id="checkbox_toggle" />
         <label for="checkbox_toggle" class="hamburger">&#9776;</label>
         <!-- NAVIGATION MENUS -->
+        
         <div class="menu">
-          <li><a href="./index3.html">Home</a></li>
-          <li><a href="#">attendance</a></li>
+          <li><a href="../main/mainhome.html">Home</a></li>
+          <li><a href="../attendance/attendance.html">attendance</a></li>
+          <li>
+            <a href="#">support</a>          
+          </li>
           <li class="trainers">
-            <a href="#">trainers</a>
+            <a href="#"><img class="selectPic" width="30px" style="border-radius: 50%;" alt=""></a>
+
+            
             <!-- DROPDOWN MENU -->
             <ul class="dropdown">
-              <li><a href="./index2.html">coach Mona Al-obisat</a></li>
-              <li><a href="./index.html">Coach Ala'a Amayreh</a></li>
+              <li><a href="#">profile</a></li>
+              <li><a href="../login/login.html">logout</a></li>
             </ul>
           </li>
-          <li><a href="#">support</a></li>
+          
         </div>
       </ul>
     </nav>
@@ -55,14 +61,14 @@
           <a href="https://www.linkedin.com/in/ala%E2%80%99a-amayreh-8797a5176/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
        </div>
        <div class="info">
-         <img src="./coach alaa.jpeg" alt="" id="alaa">
+         <img class="selectPic"  alt="" id="alaa">
        </div>
     </div>
 
     <div class="containerr">
       <button type="submit" class="btn" onclick="openPopup()">Massages</button>
       <div class="popup" id="popup">
-       <img src="./infoo.png">
+       <img src="../img/infoo.png">
        <h2>from manager salamah </h2>
        <p> zoom meeting on Monday 21 Nov 2022 at 3:00 PM</p>
        <button type="button" onclick="closePopup()">OK</button>

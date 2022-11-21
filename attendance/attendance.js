@@ -1,3 +1,24 @@
+function pic(){
+    let users = JSON.parse(localStorage.getItem('users'))
+    let current = JSON.parse(localStorage.getItem('current'))
+    let imgNav = document.getElementById('imgNav')
+    let user = users.filter(e=> e.email == current)
+    // console.log(user[0])
+    // console.log(current)
+    // console.log(imgNav)
+    if(user[0].name == "ala'a amayreh" || user[0].name == "ala'a" || user[0].name == "alaa amayreh"){
+        console.log('alaa')
+        imgNav.src = "../img/alaa.jpeg"
+    }
+    if(user[0].name == "mona" || user[0].name == "muna" || user[0].name == "muna saleh" || user[0].name == "mona saleh"){
+        console.log('mona')
+        imgNav.src = "../img/mona.jpeg" 
+    }
+}
+pic()
+
+
+
 let students = JSON.parse(localStorage.getItem("students")) || []
 // if()
 // create student
@@ -145,7 +166,7 @@ function getStudent(availableStudent){
     <td>${e.firstname}</td>
     <td>${e.lastname}</td>
     <td><button class="changeWord" onClick="details(${e.id})">explore</button></td>
-    <td><button onClick="addFeedback(${e.id})">feedBack</button></td>
+    <td><button class="feedBtn" onClick="addFeedback(${e.id})">feedBack</button></td>
     <td id='assignId' "><button onClick="increase(${e.id})"><i class="fa-solid fa-plus"></i></button ><p>${e.assign}</p><button onClick="decrease(${e.id})"><i class="fa-solid fa-minus"></i></button></td>`
     if(e.statusSt == 'abcanse'){
         html += `<td><button style="background:red;color:#fff;" class="changeWord status" onClick="absenceSt(${e.id})">${e.statusSt}</button></td>`

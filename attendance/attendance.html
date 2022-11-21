@@ -15,28 +15,33 @@
 </head>
 <body>
 
-    <!------------------------------------navbar------------------------------------------>
     <nav class="navbar">
         <!-- LOGO -->
-        <div class="logo"><img src="../img/logo2.png" style="width:10% ;"></div>
+        <div class="logo"><img src="../img/logo2.png" style="width:10%;"></div>
         <!-- NAVIGATION MENU -->
         <ul class="nav-links">
           <!-- USING CHECKBOX HACK -->
           <input type="checkbox" id="checkbox_toggle" />
           <label for="checkbox_toggle" class="hamburger">&#9776;</label>
           <!-- NAVIGATION MENUS -->
+          
           <div class="menu">
             <li><a href="../main/mainhome.html">Home</a></li>
             <li><a href="#">attendance</a></li>
-            <li class="trainers">
-              <a href="#">trainers</a>
-              <!-- DROPDOWN MENU -->
-              <!-- <ul class="dropdown">
-                <li><a href="./index2.html">coach Mona Al-obisat</a></li>
-                <li><a href="./index.html">Coach Ala'a Amayreh</a></li>
-              </ul> -->
+            <li>
+              <a href="#">support</a>          
             </li>
-            <li><a href="#">support</a></li>
+            <li class="trainers">
+              <a href="#"><img id="imgNav" width="30px" style="border-radius: 50%;" alt=""></a>
+  
+              
+              <!-- DROPDOWN MENU -->
+              <ul class="dropdown">
+                <li><a href="../trainers/coachalaa.html">profile</a></li>
+                <li><a href="../login/login.html">logout</a></li>
+              </ul>
+            </li>
+            
           </div>
         </ul>
       </nav>

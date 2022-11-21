@@ -64,8 +64,9 @@ overflow-x: hidden;
     position: absolute; 
     display: none;
     border-radius: 8px;
-    top: 35px;
-  }
+    top: 39px;
+    right: 0px;
+   }
   .dropdown li + li {
     margin-top: 10px;
   }

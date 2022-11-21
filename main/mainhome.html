@@ -10,30 +10,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <nav class="navbar">
-        <!-- LOGO -->
-        <div class="logo"><img src="./../img/logo2.png" style="width:10% ;"></div>
-        <!-- NAVIGATION MENU -->
-        <ul class="nav-links">
-          <!-- USING CHECKBOX HACK -->
-          <input type="checkbox" id="checkbox_toggle" />
-          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-          <!-- NAVIGATION MENUS -->
-          <div class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="../attendance/attendance.html">attendance</a></li>
-            <li class="trainers">
-              <a href="#">trainers</a>
-              <!-- DROPDOWN MENU -->
-              <!-- <ul class="dropdown">
-                <li><a href="./index2.html">coach Mona Al-obisat</a></li>
-                <li><a href="./index.html">Coach Ala'a Amayreh</a></li>
-              </ul> -->
-            </li>
-            <li><a href="#">support</a></li>
-          </div>
-        </ul>
-      </nav>
+  <nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo"><img src="../img/logo2.png" style="width:10%;"></div>
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+      <!-- USING CHECKBOX HACK -->
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+      <!-- NAVIGATION MENUS -->
+      
+      <div class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="../attendance/attendance.html">attendance</a></li>
+        <li>
+          <a href="#">support</a>          
+        </li>
+        <li class="trainers">
+          <a href="#"><img id="img" width="30px" style="border-radius: 50%;" src="../img/alaa.jpeg" alt=""></a>
+
+          
+          <!-- DROPDOWN MENU -->
+          <ul class="dropdown">
+            <li><a href="../trainers/coachalaa.html">profile</a></li>
+            <li><a href="../login/login.html">logout</a></li>
+          </ul>
+        </li>
+        
+      </div>
+    </ul>
+  </nav>
  
 
     
@@ -96,5 +102,7 @@
           </div>
         </div>
       </div>
+
+      <script src="./mainhome.js"></script>
 </body>
 </html>
