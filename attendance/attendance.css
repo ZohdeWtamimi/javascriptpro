@@ -15,6 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* --secondaryColor:; */
    }
    body {
     font-family: cursive;
@@ -177,8 +178,8 @@ input[type=checkbox]{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width:80%;
-    height: 80%;
+    width:50%;
+    height: 50%;
     padding: 20px;
     /* min-height: 400px; */
     /* margin: 0 auto; */
@@ -197,30 +198,37 @@ input[type=checkbox]{
     /* background-color: aqua; */
 }
 .rowBox{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     /* flex-direction: column; */
     align-items: center;
+    /* background-color: aqua; */
+    /* border-radius: 8%; */
     /* margin-top: 30px; */
     /* height: 400px; */
 }
 .studentImg{
     display: block;
-    width: 70px;
+    width: 90px;
     /* background-color: blue; */
     border-radius: 50%;
     margin-bottom: 10px;
+    margin-left: 50px;
 }
 .studentText{
-    width: 100%;
+    width: 70%;
+    text-align: end;
     /* height: 100px; */
     /* background-color: red; */
     margin-left: 10px;
     padding: 10px;
     border: #ccc solid 1px;
-    border-radius: 2px;
+    /* border-radius: 2px; */
     color: #fff;
     background-color: var(--secondaryColor);
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
 }
 .btns{
     margin-top: 4px;
@@ -304,7 +312,7 @@ input[type=checkbox]{
 }
 
 .red{
-    background-color: rgb(192, 140, 62) !important;
+    background-color: #8C769C !important;
 }
 .month{
     margin: 5px;
@@ -379,6 +387,7 @@ input[type=checkbox]{
         border: none;
         background-color: transparent;
         border-bottom: var(--bgcolor-1) 1px solid;
+        color: #fff;
     }
     .addUserform input:focus{
         outline: none;
@@ -431,9 +440,15 @@ input[type=checkbox]{
     th, td {
         /* padding: 10px; */
         height: 30px;
+        /* padding: 5px; */
         text-align: center;
         background-color: var(--secondaryColor);
         color: var(--bgcolor-1);
+    }
+    th{
+        font-weight: 900;
+        color: #8C769C;
+        padding: 13px;
     }
     .changeWord{
         border: none;
@@ -502,6 +517,7 @@ input[type=checkbox]{
     #assignId{
         display: flex;
         justify-content: space-between;
+        height: 100%;
         
     }
     #assignId button{
@@ -580,19 +596,20 @@ input[type=checkbox]{
         background-color: #ccc;
         color: #000;
     }
+    .counterBtn{
+        /* height: 100%; */
+        cursor: pointer;
+        background-color: #8C769C;
+    }
 
+@media(max-width: 738px){
 
-@media(max-width: 600px){
    .containerZohde{
-    width: 100%;
-
+        width: 100% ;
    }
-
-
-
     #box{
-        height: 35%;
-        min-height: 400px;
+        height: 30%;
+        /* min-height: 400px; */
         border-radius: 7px;
     }
     table{
@@ -603,16 +620,22 @@ input[type=checkbox]{
         /* display: flex; */
     }
     .rowBox{
-        flex-direction: column;
+        /* flex-direction: column; */
         align-items: center;
-
+        justify-content: space-between;
+        /* background-color: aqua; */
     }
     .studentImg{
-        margin-bottom: 30px;
+        /* margin-bottom: 30px; */
+        /* margin-right: 60px; */
         height: 100px;
+        width: 70px;
+        height: 70px;
     }
     .studentText{
         height: 100px;
+        font-size: 10px;
+        /* background-color: #000; */
     }
     .month{
         margin-top: 20px;
@@ -624,12 +647,63 @@ input[type=checkbox]{
     #fixed .fixedCon h3, p{
         font-size: .8rem;
     }
+    .day{
+        font-size: 16px;
+    }
+    /* #fixed h4{
+        font-size: 10px;
+    } */
 
 }
 
 
 
-
+@media(max-width: 638px){
+    #box{
+        width: 80%;
+    }
+    .mediaNone{
+        display: none;
+    }
+    th, td{
+        padding: 0;
+    }
+    .rowBox{
+        align-items: center;
+    }
+    .studentImg{
+        margin-left: 0;
+    }
+    .studentText{
+        text-align: start;
+        font-size: 7px;
+    }
+}
+@media(max-width: 438px){
+    #assignId{
+        display: none;
+    }
+    .mediaSmall{
+        display: none;
+    }
+    th, td{
+        padding: 0;
+    }
+    .addUserform{
+        width:80%;
+        margin: 10px auto;
+    }
+    .addUserform input{
+        width: 30%;
+    }
+    #fixed h1{
+        font-size: 20px;
+    }
+    /* #fixed .fixedCon h3, p{
+        padding: 0px;
+    } */
+    
+}
 
 
 

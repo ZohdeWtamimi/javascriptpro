@@ -31,7 +31,7 @@ console.log(users)
 console.log(current)
 function pic(){
     let user = users.filter(e=> e.email == current)
-    if(user[0].name == "ala'a amayreh" || user[0].name == "ala'a" || user[0].name == "alaa amayreh"){
+    if(user[0].name == "ala'a amayreh" || user[0].name == "ala'a" || user[0].name == "alaa amayreh" || user[0].name == "alaa"){
         console.log('alaa')
         selectPic[0].src = "../img/alaa.jpeg"
         selectPic[1].src = "../img/alaa.jpeg"

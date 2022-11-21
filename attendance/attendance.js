@@ -3,10 +3,10 @@ function pic(){
     let current = JSON.parse(localStorage.getItem('current'))
     let imgNav = document.getElementById('imgNav')
     let user = users.filter(e=> e.email == current)
-    // console.log(user[0])
+    console.log(user[0])
     // console.log(current)
     // console.log(imgNav)
-    if(user[0].name == "ala'a amayreh" || user[0].name == "ala'a" || user[0].name == "alaa amayreh"){
+    if(user[0].name == "ala'a amayreh" || user[0].name == "ala'a" || user[0].name == "alaa amayreh" || user[0].name == "alaa"){
         console.log('alaa')
         imgNav.src = "../img/alaa.jpeg"
     }
@@ -154,22 +154,22 @@ function getStudent(availableStudent){
     var html = `<table>
     <tr>
     <th>firstname</th>
-    <th>lastname</th>
-    <th>details</th>
-    <th>feedback</th>
-    <th>tasks 50:</th>
+    <th class="mediaNone">lastname</th>
+    <th >details</th>
+    <th >feedback</th>
+    <th class="mediaSmall">tasks 50:</th>
     <th>status</th>
     <th class="delete">del</th>
     </tr>`
     availableStudent.map( e=> {
     html += `<tr>
     <td>${e.firstname}</td>
-    <td>${e.lastname}</td>
-    <td><button class="changeWord" onClick="details(${e.id})">explore</button></td>
+    <td class="mediaNone">${e.lastname}</td>
+    <td ><button class="changeWord" onClick="details(${e.id})">explore</button></td>
     <td><button class="feedBtn" onClick="addFeedback(${e.id})">feedBack</button></td>
-    <td id='assignId' "><button onClick="increase(${e.id})"><i class="fa-solid fa-plus"></i></button ><p>${e.assign}</p><button onClick="decrease(${e.id})"><i class="fa-solid fa-minus"></i></button></td>`
+    <td class="mediaSmall" id='assignId'><button class="counterBtn" onClick="increase(${e.id})"><i class="fa-solid fa-plus"></i></button ><p>${e.assign}</p><button class="counterBtn" onClick="decrease(${e.id})"><i class="fa-solid fa-minus"></i></button></td>`
     if(e.statusSt == 'abcanse'){
-        html += `<td><button style="background:red;color:#fff;" class="changeWord status" onClick="absenceSt(${e.id})">${e.statusSt}</button></td>`
+        html += `<td><button style="background:#8C769C;color:#fff;font-weight:700;" class="changeWord status" onClick="absenceSt(${e.id})">${e.statusSt}</button></td>`
     }else{
         html += `<td><button class="changeWord status" onClick="absenceSt(${e.id})">${e.statusSt}</button></td>`
     }
@@ -184,7 +184,7 @@ function getStudent(availableStudent){
 function increase(id){
     let students = JSON.parse(localStorage.getItem('students'))
     students.map(e=>{
-        if(e.id == id){
+        if(e.id == id && e.assign <= 50){
             console.log(e.assign)
             return {
                 id: e.id,
@@ -206,7 +206,7 @@ function increase(id){
 function decrease(id){
     let students = JSON.parse(localStorage.getItem('students'))
     students.map(e=>{
-        if(e.id == id){
+        if(e.id == id && e.assign > 0){
             console.log(e.assign)
             return {
                 id: e.id,
@@ -251,8 +251,9 @@ function details(id){
 const btnabcanseDis = document.getElementById('abcanseDis')
 const calender = document.querySelector('.calender')
 // console.log(calender)
-
+let h3 = document.querySelector('.month')
 function displaySection1(month){
+    h3.innerHTML = `absence in this month: ${month.length ? month.length : 'none' }`
     let htmlDiv;
     for(let i = 1; i<31; i++){
         htmlDiv += `<div class="day">${i}</div>`
@@ -268,24 +269,6 @@ month.map(e => {
 let section1 = document.querySelector('.section1')
 console.log(section1)
 
-// section1.style.display = 'none'
-
-// let assignForm = document.getElementById('assignForm')
-// let assign = document.getElementById('assign')
-// let assignment = document.querySelector('.assignment')
-// let assignCounter = JSON.parse(localStorage.getItem('assignCounter')) || 0;
-// assignForm.addEventListener('submit', (e)=>{
-//     assignCounter++
-//     console.log(assignCounter)
-//     let task = document.createElement('div')
-//     task.classList.add(`${assign.value}`)
-//     task.innerHTML = assign.value
-//     assignment.appendChild(task)
-//     // assignment.removeChild(task)
-    
-//     e.preventDefault()
-// })
-// // console.log(assignForm)
 
 
 
@@ -295,45 +278,6 @@ console.log(section1)
 
 
 
-let arrowRight = document.querySelector('.arrowRight')
-let arrowLeft = document.querySelector('.arrowLeft')
-
-// let arrowRight = document.querySelector('.arrowRight')
-// console.log(arrowRight)
-
-
-// function any(id){
-//     students = JSON.parse(localStorage.getItem('students'))
-//     let index;
-//     for(let i=0; i<students.length; i++){
-//         if(id == students[i].id){
-//             // console.log(i)
-//             index = i
-//         }
-//     }
-    
-//     arrowRight.addEventListener('click', right)
-//     function right(){
-//         console.log(index + 1)
-//         index = index + 1
-//         console.log(students)
-//         if(index < students.length){
-//             details(students[index].id)
-//         }
-//     }
-//     arrowLeft.addEventListener('click', left)
-//     function left(){
-//         // console.log(index + 1)
-//         index = index - 1
-//         console.log(students)
-//         if(index > 0){
-//             details(students[index].id)
-//         }
-//     }
-// }
-
-let feedbackFrom = document.getElementById('feedbackFrom')
-let feedbackInput = document.querySelector('.feedbackInput')
 
 
 
@@ -346,17 +290,27 @@ let feedbackInput = document.querySelector('.feedbackInput')
 //         // console.log(feedbackInput.value, date)
     
 // }
+
+
+let feedbackFrom = document.getElementById('feedbackFrom')
+let feedbackInput = document.querySelector('.feedbackInput')
+
+feedbackFrom.addEventListener('submit', (e)=>{
+    console.log(feedbackInput.value)
+    e.preventDefault()
+})
+
 let feedback = document.getElementById('feedback')
 let feedbackDisappear = document.getElementById('feedbackDisappear')
 let dispalyFeedback = document.getElementById('dispalyFeedback')
+// console.log(addFeedback())
 function addFeedback(id){
     feedback.style.display = 'block'
     feedbackDisappear.style.display = 'block'
-    // console.log(id)
+    console.log(id)
     // addToLocal(id)
     feedbackFrom.addEventListener('submit', (e)=>{
         // console.log(id)
-        // console.log(feedbackInput.value, date)
 
         e.preventDefault()
         let x = new Date()
@@ -369,7 +323,7 @@ function addFeedback(id){
         // console.log(students)
         dispalyFeedback.innerHTML = displayFeedback(id)
     })
-    dispalyFeedback.innerHTML = displayFeedback(id)
+    // dispalyFeedback.innerHTML = displayFeedback(id)
 }
 
 feedbackDisappear.addEventListener('click', ()=>{
