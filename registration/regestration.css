@@ -19,8 +19,14 @@ body{
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     background-color: var(--secondaryColor);
+}
+
+.left h3 {
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
 }
 
 .cont{
@@ -153,7 +159,11 @@ body{
 }
 
 
-
+@media(max-width:724px){
+    body{
+        flex-direction: column;
+    }
+}
 
 
 

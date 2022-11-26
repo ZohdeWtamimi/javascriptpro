@@ -13,6 +13,7 @@ logform.addEventListener('submit', (e)=>{
         if(e.email == emailValue && e.password == passValue){
             localStorage.setItem('current', JSON.stringify(e.email))
             console.log('welcome')
+
             const url = getCurrentURL()
             loc = url.match(/.*?(?=\/login\/login\.html|$)/i)[0]
             location.href = `${loc}/main/mainhome.html`
@@ -26,3 +27,4 @@ logform.addEventListener('submit', (e)=>{
 function getCurrentURL () {
     return window.location.href
 }
+

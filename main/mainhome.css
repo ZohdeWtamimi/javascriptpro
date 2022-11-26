@@ -157,6 +157,13 @@ table{
 .follow div{
   padding-bottom: 2%;
 }
+
+.contact{
+  color: #fff;
+}
+.h3{
+  color: #fff;
+}
 .fa-phone{color: var(--bgcolor-1);
     font-size:150%;}
 .fa-linkedin{color: var(--bgcolor-1);

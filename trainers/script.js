@@ -25,12 +25,15 @@ let inform = document.getElementById('inform')
 let selectPic = document.querySelectorAll('.selectPic')
 console.log(selectPic)
 
+// pic
 let users = JSON.parse(localStorage.getItem('users'))
 let current = JSON.parse(localStorage.getItem('current'))
 console.log(users)
 console.log(current)
 function pic(){
-    let user = users.filter(e=> e.email == current)
+    // console.log()
+    if(users !== null){
+        let user = users.filter(e=> e.email == current)
     if(user[0].name == "ala'a amayreh" || user[0].name == "ala'a" || user[0].name == "alaa amayreh" || user[0].name == "alaa"){
         console.log('alaa')
         selectPic[0].src = "../img/alaa.jpeg"
@@ -41,14 +44,19 @@ function pic(){
         selectPic[0].src = "../img/mona.jpeg"
         selectPic[1].src = "../img/mona.jpeg"
     }
+    }
 }
 pic()
+
+
 function getTrainerData(){
-    let user = users.filter(e=> e.email == current)
+    if(users !== null){
+        let user = users.filter(e=> e.email == current)
     // console.log(user[0])
     Name.innerHTML = user[0].name
     email.innerHTML = user[0].email
     num.innerHTML = user[0].num
+    }
 }
 getTrainerData()
 

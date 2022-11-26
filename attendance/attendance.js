@@ -1,18 +1,20 @@
 function pic(){
-    let users = JSON.parse(localStorage.getItem('users'))
+    let users = JSON.parse(localStorage.getItem('users')) || []
     let current = JSON.parse(localStorage.getItem('current'))
     let imgNav = document.getElementById('imgNav')
-    let user = users.filter(e=> e.email == current)
-    console.log(user[0])
-    // console.log(current)
-    // console.log(imgNav)
-    if(user[0].name == "ala'a amayreh" || user[0].name == "ala'a" || user[0].name == "alaa amayreh" || user[0].name == "alaa"){
-        console.log('alaa')
-        imgNav.src = "../img/alaa.jpeg"
-    }
-    if(user[0].name == "mona" || user[0].name == "muna" || user[0].name == "muna saleh" || user[0].name == "mona saleh"){
-        console.log('mona')
-        imgNav.src = "../img/mona.jpeg" 
+    if(users.length > 0){
+        let user = users.filter(e=> e.email == current)
+        console.log(user[0])
+        // console.log(current)
+        // console.log(imgNav)
+        if(user[0].name == "ala'a amayreh" || user[0].name == "ala'a" || user[0].name == "alaa amayreh" || user[0].name == "alaa"){
+            console.log('alaa')
+            imgNav.src = "../img/alaa.jpeg"
+        }
+        if(user[0].name == "mona" || user[0].name == "muna" || user[0].name == "muna saleh" || user[0].name == "mona saleh"){
+            console.log('mona')
+            imgNav.src = "../img/mona.jpeg" 
+        }
     }
 }
 pic()
@@ -115,7 +117,7 @@ function absenceSt(id){
 }
 
 
-// onClick it will give report and make all student attende again
+// onClick it will give report and make all student 
 function getAbsanceStudentS(){
     let absences = students.filter(e => e.statusSt == 'abcanse')
     console.log(absences)
@@ -169,7 +171,7 @@ function getStudent(availableStudent){
     <td><button class="feedBtn" onClick="addFeedback(${e.id})">feedBack</button></td>
     <td class="mediaSmall" id='assignId'><button class="counterBtn" onClick="increase(${e.id})"><i class="fa-solid fa-plus"></i></button ><p>${e.assign}</p><button class="counterBtn" onClick="decrease(${e.id})"><i class="fa-solid fa-minus"></i></button></td>`
     if(e.statusSt == 'abcanse'){
-        html += `<td><button style="background:#8C769C;color:#fff;font-weight:700;" class="changeWord status" onClick="absenceSt(${e.id})">${e.statusSt}</button></td>`
+        html += `<td><button style="background:#ccc;color:#000;font-weight:700;" class="changeWord status" onClick="absenceSt(${e.id})">${e.statusSt}</button></td>`
     }else{
         html += `<td><button class="changeWord status" onClick="absenceSt(${e.id})">${e.statusSt}</button></td>`
     }
@@ -254,11 +256,17 @@ const calender = document.querySelector('.calender')
 let h3 = document.querySelector('.month')
 function displaySection1(month){
     h3.innerHTML = `absence in this month: ${month.length ? month.length : 'none' }`
-    let htmlDiv;
+    let htmlDiv = `<div class="day">su</div>
+    <div class="day">mo</div>
+    <div class="day">tu</div>
+    <div class="day">we</div>
+    <div class="day">th</div>
+    <div class="day">fr</div>
+    <div class="day">sat</div>`
     for(let i = 1; i<31; i++){
         htmlDiv += `<div class="day">${i}</div>`
     }
-calender.innerHTML = htmlDiv.slice(9)
+calender.innerHTML = htmlDiv
 
 month.map(e => {
     document.querySelectorAll('.day')[e - 1].classList.add('red')
@@ -281,15 +289,6 @@ console.log(section1)
 
 
 
-// function addToLocal(e){
-//         // console.log(id)
-//         // e.preventDefault()
-//         // let x = new Date()
-//         // let date = `${x.getDate()}/${x.getMonth()}/${x.getFullYear()} ${x.getHours()}:${x.getMinutes()}:${x.getSeconds()}` 
-    
-//         // console.log(feedbackInput.value, date)
-    
-// }
 
 
 let feedbackFrom = document.getElementById('feedbackFrom')

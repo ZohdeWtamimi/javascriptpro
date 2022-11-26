@@ -179,7 +179,7 @@ input[type=checkbox]{
     left: 50%;
     transform: translate(-50%, -50%);
     width:50%;
-    height: 50%;
+    height: 60%;
     padding: 20px;
     /* min-height: 400px; */
     /* margin: 0 auto; */
@@ -265,7 +265,7 @@ input[type=checkbox]{
 }
 .calender{
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     /* gap: 2px; */
     /* width: 90%; */
     height: 80px;
@@ -275,7 +275,6 @@ input[type=checkbox]{
     border-radius: 5px;
     font-size: 25px;
     margin: 2%;
-    
 }
 .month{
     text-align: center;
@@ -608,7 +607,7 @@ input[type=checkbox]{
         width: 100% ;
    }
     #box{
-        height: 30%;
+        height: 50%;
         /* min-height: 400px; */
         border-radius: 7px;
     }
